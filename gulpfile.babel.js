@@ -1,5 +1,6 @@
 import gulp from 'gulp';
+require( 'require-dir' )( './gulp/tasks' );
 
-gulp.task('default', () => {
-  console.log('xoxoxoxo')
+gulp.task('default', ['serve', 'watch'], () => {
+  console.log('gulp tasks done!');
 });
