@@ -2,12 +2,16 @@ const gulp = require('gulp');
 const handlebars = require('gulp-compile-handlebars');
 const rename = require('gulp-rename');
 const paths = require( '../paths' );
+const htmlContent = require( '../htmlContent' );
 
 gulp.task('compile-index', ['clean'], () => {
   const templateData = {};
   const options = {
       ignorePartials: true,
-      batch : [paths.srcPartials]
+      batch : [paths.srcPartials],
+      partials: {
+        boxContent: htmlContent.indexBoxContent
+      }
   };
 
     return gulp.src( paths.srcIndexHbs )

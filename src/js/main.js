@@ -121,6 +121,10 @@
     } , { offset: '85%' } );
     };
 
+    var actualYear = function() {
+      var year = new Date().getFullYear();
+      $('#actualYear').text(year);
+    };
 
     // Document on load.
     $(function(){
@@ -129,7 +133,7 @@
     offcanvas();
     mobileMenuOutsideClick();
     contentWayPoint();
-
+    actualYear();
 
     });
 
