@@ -8,6 +8,7 @@ function reportChange( event ) {
 }
 
 gulp.task( 'watch', () => {
-  gulp.watch( paths.srcJs, [ 'build-js', reload ]).on( 'change', reportChange );
-  gulp.watch( paths.srcCss, [ 'build-css', reload ]).on( 'change', reportChange );
+  gulp.watch( paths.srcJs, [ 'build', reload ]).on( 'change', reportChange );
+  gulp.watch( paths.srcCss, [ 'build', reload ]).on( 'change', reportChange );
+  gulp.watch( './src/handlebars/**', [ 'build', reload ]).on( 'change', reportChange );
 });

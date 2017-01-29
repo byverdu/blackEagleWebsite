@@ -14,20 +14,8 @@ module.exports = {
   destImg: `${destDir}/images/`,
   srcFonts: `${srcDir}/fonts/**/`,
   destFonts: `${destDir}/fonts/`,
-  srcServe: destDir
+  srcPartials: `${srcDir}/handlebars/partials`,
+  srcIndexHbs: `${srcDir}/handlebars/index.handlebars`,
+  srcServe: destDir,
+  destDir: destDir,
 };
-
-// module.exports = {
-//   srcJs: `${srcDir}/js/*.js`,
-//   destJs: `${destDir}/js`,
-//   srcLib: `${srcDir}/lib/*`,
-//   destLib: `${srcDir}/lib/*`,
-//   destCss: destDir,
-//   srcSass: `${srcDir}/styles.scss`,
-//   destSass: destDir,
-//   srcCss: `${destDir}/styles.css`,
-//   cleanDir: destDir,
-//   srcHtml: 'index.html',
-//   destHtml: destDir,
-//   srcServe: destDir,
-// };
