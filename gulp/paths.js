@@ -16,6 +16,9 @@ module.exports = {
   destFonts: `${destDir}/fonts/`,
   srcPartials: `${srcDir}/handlebars/partials`,
   srcIndexHbs: `${srcDir}/handlebars/index.handlebars`,
+  srcContactHbs: `${srcDir}/handlebars/contact.handlebars`,
+  srcSuccessHbs: `${srcDir}/handlebars/success.handlebars`,
+  srcPHP: `${srcDir}/sendEmail.php`,
   srcServe: destDir,
   destDir: destDir,
 };
