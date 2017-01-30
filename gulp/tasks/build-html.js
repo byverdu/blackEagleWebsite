@@ -35,6 +35,19 @@ gulp.task('compile-contact', ['clean'], () => {
       .pipe(gulp.dest( paths.destDir ));
 });
 
+gulp.task('compile-about', ['clean'], () => {
+  const templateData = {
+    boxContent: content.safeString(
+      content.aboutBoxHtml
+    )
+  };
+
+  return gulp.src( paths.srcAboutHbs )
+      .pipe(handlebars( templateData, options ))
+      .pipe(rename('about.html'))
+      .pipe(gulp.dest( paths.destDir ));
+});
+
 gulp.task('compile-success', ['clean'], () => {
   const templateData = {
     boxContent: content.safeString(
@@ -56,6 +69,7 @@ gulp.task('move-php', ['clean'], () => {
 gulp.task( 'build-html', [
   'compile-index',
   'compile-contact',
+  'compile-about',
   'compile-success',
   'move-php'
 ]);

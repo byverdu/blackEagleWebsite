@@ -12,6 +12,8 @@ const indexBoxHtml = `<h2>Close Protection Special Unit</h2>
 
 const contactBoxHtml = `<h2>Contact Us</h2>`;
 
+const aboutBoxHtml = `<h2>About Us</h2>`;
+
 const successBoxHtml = `<h2 class="success">Your Message has been send succesfully.</h2>`;
 
 const safeString = (content) => {
@@ -21,6 +23,7 @@ const safeString = (content) => {
 export {
   indexBoxHtml,
   contactBoxHtml,
+  aboutBoxHtml,
   successBoxHtml,
   safeString
 }
