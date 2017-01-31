@@ -18,6 +18,7 @@ module.exports = {
   srcIndexHbs: `${srcDir}/handlebars/index.handlebars`,
   srcContactHbs: `${srcDir}/handlebars/contact.handlebars`,
   srcAboutHbs: `${srcDir}/handlebars/about.handlebars`,
+  srcServicesHbs: `${srcDir}/handlebars/services.handlebars`,
   srcSuccessHbs: `${srcDir}/handlebars/success.handlebars`,
   srcPHP: `${srcDir}/sendEmail.php`,
   srcServe: destDir,

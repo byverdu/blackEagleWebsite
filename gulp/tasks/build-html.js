@@ -9,6 +9,7 @@ const options = {
   batch : [paths.srcPartials]
 };
 
+// index.html
 gulp.task('compile-index', ['clean'], () => {
   const templateData = {
     boxContent: content.safeString(
@@ -22,6 +23,7 @@ gulp.task('compile-index', ['clean'], () => {
       .pipe(gulp.dest( paths.destDir ));
 });
 
+// contact.html
 gulp.task('compile-contact', ['clean'], () => {
   const templateData = {
     boxContent: content.safeString(
@@ -35,6 +37,7 @@ gulp.task('compile-contact', ['clean'], () => {
       .pipe(gulp.dest( paths.destDir ));
 });
 
+// about.html
 gulp.task('compile-about', ['clean'], () => {
   const templateData = {
     boxContent: content.safeString(
@@ -48,6 +51,21 @@ gulp.task('compile-about', ['clean'], () => {
       .pipe(gulp.dest( paths.destDir ));
 });
 
+// services.html
+gulp.task('compile-services', ['clean'], () => {
+  const templateData = {
+    boxContent: content.safeString(
+      content.servicesBoxHtml
+    )
+  };
+
+  return gulp.src( paths.srcServicesHbs )
+      .pipe(handlebars( templateData, options ))
+      .pipe(rename('services.html'))
+      .pipe(gulp.dest( paths.destDir ));
+});
+
+// success message when sending email
 gulp.task('compile-success', ['clean'], () => {
   const templateData = {
     boxContent: content.safeString(
@@ -70,6 +88,7 @@ gulp.task( 'build-html', [
   'compile-index',
   'compile-contact',
   'compile-about',
+  'compile-services',
   'compile-success',
   'move-php'
 ]);
