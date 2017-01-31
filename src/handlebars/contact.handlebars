@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<!-- html template borrowed from https://freehtml5.co/ :)-->
+
+{{> headTag}}
+<body>
+  <div id="fh5co-wrapper">
+    <div id="fh5co-page">
+      {{> headerTag}}
+
+      <div id="fh5co-contact" class="animate-box">
+        <div class="container">
+          <form action="sendEmail.php" method="post">
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="section-title">Our Address</h3>
+                <b>All email enquiries will have a guaranteed response within 24 hours.</b>
+                <ul class="contact-info">
+                  <li><i class="icon-location-pin"></i>16 Arthur Street Gravesend, Kent <br/> DA11 0PP</li>
+                  <li><i class="icon-old-phone"></i>+44 07848186266</li>
+                  <li><i class="icon-phone"></i>07815149874</li>
+                  <li><i class="icon-mail"></i><a href="mailto:blackeagle.secu@gmail.com?Subject=Website%20query" target="_top">blackeagle.secu@gmail.com</a></li>
+                  <li><i class="icon-globe2"></i><a href="#">www.bse.com</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input name="name" required type="text" class="form-control" placeholder="Name">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="name">Email</label>
+                      <input name="email" required type="email" class="form-control" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="name">Message</label>
+                      <textarea required name="message" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input type="submit" value="Send Message" class="btn btn-primary">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- END fh5co-contact -->
+
+      <!-- map container -->
+      <div id="map" class="fh5co-map"></div>
+
+      {{> footerTag}}
+    </div><!-- END fh5co-page -->
+  </div><!-- END fh5co-wrapper -->
+
+  {{> mapScripts}}
+</body>
+
+</html>
