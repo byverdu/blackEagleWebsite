@@ -51,17 +51,45 @@ gulp.task('compile-about', ['clean'], () => {
       .pipe(gulp.dest( paths.destDir ));
 });
 
-// services.html
-gulp.task('compile-services', ['clean'], () => {
+// close-protection.html
+gulp.task('compile-close-protection', ['clean'], () => {
   const templateData = {
     boxContent: content.safeString(
-      content.servicesBoxHtml
+      content.closeBoxHtml
     )
   };
 
-  return gulp.src( paths.srcServicesHbs )
+  return gulp.src( paths.srcCloseHbs )
       .pipe(handlebars( templateData, options ))
-      .pipe(rename('services.html'))
+      .pipe(rename('close-protection.html'))
+      .pipe(gulp.dest( paths.destDir ));
+});
+
+// cctv-monitoring.html
+gulp.task('compile-cctv', ['clean'], () => {
+  const templateData = {
+    boxContent: content.safeString(
+      content.monitorBoxHtml
+    )
+  };
+
+  return gulp.src( paths.srcMonitorHbs )
+      .pipe(handlebars( templateData, options ))
+      .pipe(rename('cctv-monitoring.html'))
+      .pipe(gulp.dest( paths.destDir ));
+});
+
+// private.html
+gulp.task('compile-private', ['clean'], () => {
+  const templateData = {
+    boxContent: content.safeString(
+      content.privateBoxHtml
+    )
+  };
+
+  return gulp.src( paths.srcPrivateHbs )
+      .pipe(handlebars( templateData, options ))
+      .pipe(rename('private-investigations.html'))
       .pipe(gulp.dest( paths.destDir ));
 });
 
@@ -88,7 +116,9 @@ gulp.task( 'build-html', [
   'compile-index',
   'compile-contact',
   'compile-about',
-  'compile-services',
+  'compile-close-protection',
+  'compile-cctv',
+  'compile-private',
   'compile-success',
   'move-php'
 ]);

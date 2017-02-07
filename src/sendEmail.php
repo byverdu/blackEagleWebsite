@@ -4,7 +4,7 @@ if(isset($_POST['email'])) {
 
   // EDIT THE 2 LINES BELOW AS REQUIRED
 
-  $email_to = "byverdu@gmail.com";
+  $email_to = "blackeagle.secu@gmail.com";
 
   $email_subject = "Message from the website";
 
